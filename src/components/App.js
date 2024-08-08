@@ -13,12 +13,14 @@ function App() {
             setIsLoading(false)
         })
         .catch((error) => {
+            //log any errors that occur during the fetch operation
             console.error("Error fetching dog image:", error)
             setIsLoading(false)
         });
     }, []);
   return (
     <div>
+        
         {isLoading ?(
             <p>Loading...</p>
         ) : (
